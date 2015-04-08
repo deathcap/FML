@@ -20,6 +20,7 @@ public class FMLServerTweaker extends FMLTweaker {
         classLoader.addTransformerExclusion("net.minecraftforge.fml.relauncher.");
         classLoader.addTransformerExclusion("net.minecraftforge.fml.common.asm.transformers.");
         classLoader.addClassLoaderExclusion("LZMA.");
+        classLoader.addTransformerExclusion("org.apache.commons.lang3");
         FMLLaunchHandler.configureForServerLaunch(classLoader, this);
         FMLLaunchHandler.appendCoreMods();
     }
